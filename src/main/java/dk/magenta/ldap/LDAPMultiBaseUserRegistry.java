@@ -1683,8 +1683,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
                 // Additional logic to iterate through all search bases
                 this.searchBaseIndex++;
-                if (this.searchBaseIndex <= LDAPMultiBaseUserRegistry.this
-                        .userSearchBases.length) {
+                if (this.searchBaseIndex < LDAPMultiBaseUserRegistry.this.userSearchBases.length) {
                     this.searchResults = this.ctx.search
                             (LDAPMultiBaseUserRegistry.this.userSearchBases[this.searchBaseIndex],
                                     PersonCollection.this.query, this.userSearchCtls);
