@@ -1234,8 +1234,15 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
     private void processQuery(SearchCallback callback, String searchBases[],
                               String query, String[] returningAttributes)
     {
-        for (String searchBase : searchBases) {
-            processQuery(callback, searchBase, query, returningAttributes);
+        try {
+            for (String searchBase : searchBases) {
+                processQuery(callback, searchBase, query, returningAttributes);
+            }
+        } finally {
+            try {
+                callback.close();
+            } catch (NamingException e) {
+            }
         }
     }
 
@@ -1344,13 +1351,6 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                 catch (NamingException e)
                 {
                 }
-            }
-            try
-            {
-                callback.close();
-            }
-            catch (NamingException e)
-            {
             }
         }
     }
