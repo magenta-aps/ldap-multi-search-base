@@ -676,6 +676,11 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         final boolean disjoint = areLDAPNameSetsDisjoint(groupDistinguishedNamePrefixes,
                         userDistinguishedNamePrefixes);
 
+        if (LDAPMultiBaseUserRegistry.logger.isDebugEnabled()) {
+            LDAPMultiBaseUserRegistry.logger.debug("Groups and users search " +
+                    "bases are disjoint? " + disjoint);
+        }
+
         // Choose / generate the query
         String query;
         if (modifiedSince == null)
