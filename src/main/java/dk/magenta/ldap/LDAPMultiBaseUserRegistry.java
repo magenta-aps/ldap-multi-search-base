@@ -48,7 +48,7 @@ import java.util.regex.Pattern;
 /**
  * A {@link org.alfresco.repo.security.sync.UserRegistry} implementation with the ability to query Alfresco-like descriptions of users and groups from
  * an LDAP directory, optionally restricted to those modified since a certain time.
- * 
+ *
  * @author dward
  */
 public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver, InitializingBean, ActivateableBean
@@ -171,7 +171,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Controls whether this bean is active. I.e. should this part of the subsystem be used?
-     * 
+     *
      * @param active
      *            <code>true</code> if this bean is active
      */
@@ -183,7 +183,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
     /**
      * Controls whether progress estimation is enabled. When enabled, the user query has to be run twice in order to
      * count entries.
-     * 
+     *
      * @param enableProgressEstimation
      *            <code>true</code> if progress estimation is enabled
      */
@@ -194,7 +194,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group id attribute name.
-     * 
+     *
      * @param groupIdAttributeName
      *            the group id attribute name
      */
@@ -205,7 +205,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group query.
-     * 
+     *
      * @param groupQuery
      *            the group query
      */
@@ -216,7 +216,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group differential query.
-     * 
+     *
      * @param groupDifferentialQuery
      *            the group differential query
      */
@@ -227,7 +227,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the person query.
-     * 
+     *
      * @param personQuery
      *            the person query
      */
@@ -238,7 +238,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the person differential query.
-     * 
+     *
      * @param personDifferentialQuery
      *            the person differential query
      */
@@ -249,7 +249,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group type.
-     * 
+     *
      * @param groupType
      *            the group type
      */
@@ -260,7 +260,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the member attribute name.
-     * 
+     *
      * @param memberAttribute
      *            the member attribute name
      */
@@ -271,7 +271,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the person type.
-     * 
+     *
      * @param personType
      *            the person type
      */
@@ -282,7 +282,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group search base.
-     * 
+     *
      * @param groupSearchBase
      *            the group search base
      */
@@ -294,7 +294,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the user search base.
-     * 
+     *
      * @param userSearchBase
      *            the user search base
      */
@@ -306,7 +306,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the user id attribute name.
-     * 
+     *
      * @param userIdAttributeName
      *            the user id attribute name
      */
@@ -317,7 +317,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the modification timestamp attribute name.
-     * 
+     *
      * @param modifyTimestampAttributeName
      *            the modification timestamp attribute name
      */
@@ -328,7 +328,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the timestamp format. Unfortunately, this varies between directory servers.
-     * 
+     *
      * @param timestampFormat
      *            the timestamp format
      *            <ul>
@@ -344,7 +344,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Decides whether to error on missing group members.
-     * 
+     *
      * @param errorOnMissingMembers
      *            <code>true</code> if we should error on missing group members
      */
@@ -355,7 +355,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Decides whether to error on missing group IDs.
-     * 
+     *
      * @param errorOnMissingGID
      *            <code>true</code> if we should error on missing group IDs
      */
@@ -366,7 +366,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Decides whether to error on missing user IDs.
-     * 
+     *
      * @param errorOnMissingUID
      *            <code>true</code> if we should error on missing user IDs
      */
@@ -377,7 +377,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Decides whether to error on duplicate group IDs.
-     * 
+     *
      * @param errorOnDuplicateGID
      *            <code>true</code> if we should error on duplicate group IDs
      */
@@ -388,7 +388,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the LDAP initial dir context factory.
-     * 
+     *
      * @param ldapInitialDirContextFactory
      *            the new LDAP initial dir context factory
      */
@@ -399,7 +399,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the namespace service.
-     * 
+     *
      * @param namespaceService
      *            the namespace service
      */
@@ -410,7 +410,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the person attribute defaults.
-     * 
+     *
      * @param personAttributeDefaults
      *            the person attribute defaults
      */
@@ -421,7 +421,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the person attribute mapping.
-     * 
+     *
      * @param personAttributeMapping
      *            the person attribute mapping
      */
@@ -432,7 +432,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group attribute defaults.
-     * 
+     *
      * @param groupAttributeDefaults
      *            the group attribute defaults
      */
@@ -443,7 +443,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the group attribute mapping.
-     * 
+     *
      * @param groupAttributeMapping
      *            the group attribute mapping
      */
@@ -454,7 +454,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the query batch size.
-     * 
+     *
      * @param queryBatchSize
      *            If positive, indicates that RFC 2696 paged results should be used to split query results into batches
      *            of the specified size. Overcomes any size limits imposed by the LDAP server.
@@ -466,7 +466,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Sets the attribute batch size.
-     * 
+     *
      * @param attributeBatchSize
      *            If positive, indicates that range retrieval should be used to fetch multi-valued attributes (such as
      *            member) in batches of the specified size. Overcomes any size limits imposed by the LDAP server.
@@ -498,7 +498,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         this.personAttributeMapping.put(ContentModel.PROP_USERNAME.toPrefixString(this.namespaceService),
                 this.userIdAttributeName);
         this.userKeys = initKeys(this.personAttributeMapping);
-        
+
         // Include a range restriction for the multi-valued member attribute if this is enabled
         if (this.groupAttributeMapping == null)
         {
@@ -511,7 +511,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                         : this.memberAttributeName);
     }
 
-    
+
     /* (non-Javadoc)
      * @see org.alfresco.repo.security.sync.UserRegistry#getPersonMappedProperties()
      */
@@ -529,7 +529,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         return new PersonCollection(modifiedSince);
     }
 
-    
+
     /* (non-Javadoc)
      * @see org.alfresco.repo.security.sync.UserRegistry#getPersonNames()
      */
@@ -630,18 +630,18 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         return false;
     }
 
-    private boolean areLDAPNameSetsDisjoint(Set<LdapName> s1, Set<LdapName> s2) {
-        for (LdapName n1 : s1) {
-            for (LdapName n2 : s2) {
-                if (n1.startsWith(n2)) {
-                    return false;
-                }
-                if (n2.startsWith(n1)) {
-                    return false;
+    private boolean removeDistjointNamesFromSets(Set<LdapName> s1, Set<LdapName> s2) {
+        Set<LdapName> copyS1 = new LinkedHashSet<>(s1);
+        Set<LdapName> copyS2 = new LinkedHashSet<>(s2);
+        for (LdapName n1 : copyS1) {
+            for (LdapName n2 : copyS2) {
+                if (n1.startsWith(n2) || n2.startsWith(n1)) {
+                    s1.remove(n1);
+                    s2.remove(n2);
                 }
             }
         }
-        return true;
+        return !s1.isEmpty() && !s2.isEmpty();
     }
 
     /*
@@ -673,8 +673,9 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
             }
         }
 
-        final boolean disjoint = areLDAPNameSetsDisjoint(groupDistinguishedNamePrefixes,
-                        userDistinguishedNamePrefixes);
+        final Set<LdapName> distinctGroupDNPrefixes = new LinkedHashSet<>(groupDistinguishedNamePrefixes);
+        final Set<LdapName> distinctUserDNPrefixes = new LinkedHashSet<>(userDistinguishedNamePrefixes);
+        final boolean disjoint = removeDistjointNamesFromSets(distinctGroupDNPrefixes, distinctUserDNPrefixes);
 
         if (LDAPMultiBaseUserRegistry.logger.isDebugEnabled()) {
             LDAPMultiBaseUserRegistry.logger.debug("Groups and users search " +
@@ -774,7 +775,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                                             .toAttributes();
 
                                     // Recognize user DNs
-                                    if (nameStartsWithNameInSet(distinguishedNameForComparison, userDistinguishedNamePrefixes)
+                                    if (nameStartsWithNameInSet(distinguishedNameForComparison, distinctUserDNPrefixes)
                                             && (nameAttribute = nameAttributes
                                                     .get(LDAPMultiBaseUserRegistry.this.userIdAttributeName)) != null)
                                     {
@@ -787,7 +788,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                                     }
 
                                     // Recognize group DNs
-                                    if (nameStartsWithNameInSet(distinguishedNameForComparison, groupDistinguishedNamePrefixes)
+                                    if (nameStartsWithNameInSet(distinguishedNameForComparison, distinctGroupDNPrefixes)
                                             && (nameAttribute = nameAttributes
                                                     .get(LDAPMultiBaseUserRegistry.this.groupIdAttributeName)) != null)
                                     {
@@ -894,7 +895,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                                 if (LDAPMultiBaseUserRegistry.logger.isDebugEnabled())
                                 {
                                     LDAPMultiBaseUserRegistry.logger.debug("Member DN recognized as posixGroup: " + attribute);
-                                }                                
+                                }
                                 childAssocs.add(attribute);
                             }
                         }
@@ -1142,7 +1143,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
     /**
      * Converts a given DN into one suitable for use through JNDI. In particular, escapes special characters such as '/'
      * which have special meaning to JNDI.
-     * 
+     *
      * @param dn
      *            the dn
      * @return the name
@@ -1155,12 +1156,12 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         n.add(dn);
         return n;
     }
-    
+
     /**
      * Works around a bug in the JDK DN parsing. If an RDN has trailing escaped whitespace in the format "\\20" then
      * LdapName would normally strip this. This method works around this by replacing "\\20" with "\\ " and "\\0D" with
      * "\\\r".
-     * 
+     *
      * @param dn
      *            the DN
      * @return the parsed ldap name
@@ -1357,7 +1358,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
     /**
      * Does a case-insensitive search for the given value in an attribute.
-     * 
+     *
      * @param attribute
      *            the attribute
      * @param value
@@ -1393,7 +1394,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
      * Gets the values of a repeating attribute that may have range restriction options. If an attribute is range
      * restricted, it will appear in the attribute set with a ";range=i-j" option, where i and j indicate the start and
      * end index, and j is '*' if it is at the end.
-     * 
+     *
      * @param attributes
      *            the attributes
      * @param attributeName
@@ -1436,7 +1437,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
         /**
          * Instantiates a new person collection.
-         * 
+         *
          * @param modifiedSince
          *            if non-null, then only descriptions of users modified since this date should be returned; if
          *            <code>null</code> then descriptions of all users should be returned.
@@ -1610,7 +1611,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
             /**
              * Pre-fetches the next node description to be returned.
-             * 
+             *
              * @return the node description
              * @throws javax.naming.NamingException
              *             on a naming exception
@@ -1681,17 +1682,20 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                 this.searchResults.close();
                 this.searchResults = null;
 
+                this.ctx.close();
+                this.ctx = null;
+
                 // Additional logic to iterate through all search bases
                 this.searchBaseIndex++;
                 if (this.searchBaseIndex < LDAPMultiBaseUserRegistry.this.userSearchBases.length) {
+                    this.ctx = LDAPMultiBaseUserRegistry.this.ldapInitialContextFactory
+                            .getDefaultIntialDirContext(LDAPMultiBaseUserRegistry.this.queryBatchSize);
                     this.searchResults = this.ctx.search
                             (LDAPMultiBaseUserRegistry.this.userSearchBases[this.searchBaseIndex],
                                     PersonCollection.this.query, this.userSearchCtls);
                     return this.fetchNext();
                 }
 
-                this.ctx.close();
-                this.ctx = null;
                 return null;
             }
 
@@ -1715,7 +1719,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
         /**
          * Processes the given search result.
-         * 
+         *
          * @param result
          *            the result
          * @throws javax.naming.NamingException
@@ -1727,7 +1731,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
         /**
          * Release any resources held by the callback.
-         * 
+         *
          * @throws javax.naming.NamingException
          *             the naming exception
          */

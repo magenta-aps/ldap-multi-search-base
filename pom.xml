@@ -7,8 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>LDAP Multi Search Base</name>
     <packaging>amp</packaging>
-    <description>Overrides LDAP user registry to support multiple search
-        bases</description>
+    <description>Overrides LDAP user registry to support multiple bases</description>
 
     <parent>
         <groupId>org.alfresco.maven</groupId>
