@@ -630,7 +630,7 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
         return false;
     }
 
-    private boolean removeDistjointNamesFromSets(Set<LdapName> s1, Set<LdapName> s2) {
+    private void removeCommonPrefixedNamesFromSets(Set<LdapName> s1, Set<LdapName> s2) {
         Set<LdapName> copyS1 = new LinkedHashSet<>(s1);
         Set<LdapName> copyS2 = new LinkedHashSet<>(s2);
         for (LdapName n1 : copyS1) {
@@ -641,7 +641,6 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
                 }
             }
         }
-        return !s1.isEmpty() && !s2.isEmpty();
     }
 
     /*
@@ -675,11 +674,20 @@ public class LDAPMultiBaseUserRegistry implements UserRegistry, LDAPNameResolver
 
         final Set<LdapName> distinctGroupDNPrefixes = new LinkedHashSet<>(groupDistinguishedNamePrefixes);
         final Set<LdapName> distinctUserDNPrefixes = new LinkedHashSet<>(userDistinguishedNamePrefixes);
-        final boolean disjoint = removeDistjointNamesFromSets(distinctGroupDNPrefixes, distinctUserDNPrefixes);
+        removeCommonPrefixedNamesFromSets(distinctGroupDNPrefixes, distinctUserDNPrefixes);
+
+        // If there exist either distinct user DNs or group DNs, then the
+        // sets are disjoint, and we may be able to recognize user or group
+        // DNs without secondary lookup
+        final boolean disjoint = !distinctUserDNPrefixes.isEmpty() || !distinctGroupDNPrefixes.isEmpty();
 
         if (LDAPMultiBaseUserRegistry.logger.isDebugEnabled()) {
-            LDAPMultiBaseUserRegistry.logger.debug("Groups and users search " +
-                    "bases are disjoint? " + disjoint);
+            if (disjoint) {
+                LDAPMultiBaseUserRegistry.logger.debug("Distinct user " +
+                        "DN prefixes: " + distinctUserDNPrefixes);
+                LDAPMultiBaseUserRegistry.logger.debug("Distinct group " +
+                        "DN prefixes: " + distinctGroupDNPrefixes);
+            }
         }
 
         // Choose / generate the query
