@@ -5,6 +5,8 @@ This Alfresco AMP module overrides the default beans for LDAP authentication/syn
 
 *Disclaimer*: This module has undergone limited testing. Use at your own risk.
 
+Tested against Alfresco 5.0.c.
+
 Configuration
 -------------------
 
